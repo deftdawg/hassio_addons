@@ -28,9 +28,6 @@ ARG SIGNAL_CLI_NATIVE_PACKAGE_VERSION
 # Clone deftdawg fork of signal-cli-rest-api
 RUN git clone --depth 1 -b ${SIGNAL_CLI_REST_API_BRANCH} ${SIGNAL_CLI_REST_API_REPO} /tmp/signal-cli-rest-api
 
-COPY --from=scratch /tmp/signal-cli-rest-api/ext/libraries/libsignal-client/v${LIBSIGNAL_CLIENT_VERSION} /tmp/libsignal-client-libraries
-COPY --from=scratch /tmp/signal-cli-rest-api/ext/libraries/libsignal-client/signal-cli-native.patch /tmp/signal-cli-native.patch
-
 # use architecture specific libsignal_jni.so
 RUN arch="$(uname -m)"; \
         case "$arch" in \

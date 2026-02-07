@@ -1,7 +1,5 @@
 ---
-# Build from source - no pre-built images needed
-# The Dockerfile clones and builds deftdawg/signal-cli-rest-api
-build_from:
-  aarch64: golang:1.24-bookworm
-  amd64: golang:1.24-bookworm
-  armv7: golang:1.24-bookworm
+# Build from source using multi-stage Dockerfile
+# No pre-built images - the Dockerfile clones and builds deftdawg/signal-cli-rest-api
+args:
+  BUILD_ARCH: "${BUILD_ARCH}"
