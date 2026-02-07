@@ -28,7 +28,7 @@ Valid options:
 
 ### Auto receive
 
-This option is recommened by the up-stream project to be enabled if you do not have a rest api endpoint setup to listen for new messages. See documentation [here](https://github.com/bbernhard/signal-cli-rest-api#auto-receive-schedule) for more details. This option does not apply to json-rpc mode and will be ignored in that mode.
+This option is recommended by the upstream project to be enabled if you do not have a rest api endpoint setup to listen for new messages. See documentation [here](https://github.com/deftdawg/signal-cli-rest-api#auto-receive-schedule) for more details. This option does not apply to json-rpc mode and will be ignored in that mode.
 
 Valid options:
 
@@ -45,7 +45,7 @@ This option deletes all data and resets the add-on. Be aware all your settings w
 
 ## Versioning
 
-This add-on follows the versioning of the upstream container. There is very little difference between this add-on and the container found [here](https://github.com/bbernhard/signal-cli-rest-api).
+This add-on builds from [deftdawg/signal-cli-rest-api](https://github.com/deftdawg/signal-cli-rest-api), a fork that adds `/api/v1/rpc`, `/api/v1/events`, and `/api/v1/check` endpoints for openclaw integration.
 As of this writing the upstream container versioning uses the 0.xx pattern for releases. This add-on follows the same pattern, but uses 0.xx.y where y indicates a change from the upstream that is related to Home Assistant add-on specific changes.
 
 ## Differences with the Upstream
@@ -55,7 +55,7 @@ There is also a script that runs to allow for setting the above option(s).
 
 ## Bug Reporting
 
-Bug reports can be filed either with the [add-on repository](https://github.com/haberda/hassio_addons), or with the [upstream repository](https://github.com/bbernhard/signal-cli-rest-api). 
+Bug reports can be filed either with the [add-on repository](https://github.com/deftdawg/hassio_addons), or with the [upstream repository](https://github.com/deftdawg/signal-cli-rest-api). 
 Please attempt to determine if your bug is related to add-on specific issues, or application issues before filing your report. Add-on specific issues should be submitted to the add-on repository, application specific issues should be filed with the upstream repository.
 
 
