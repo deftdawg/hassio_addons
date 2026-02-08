@@ -25,6 +25,8 @@ ARG GRAALVM_VERSION
 ARG BUILD_VERSION_ARG
 ARG SIGNAL_CLI_NATIVE_PACKAGE_VERSION
 
+ADD https://api.github.com/repos/deftdawg/signal-cli-rest-api/commits/${SIGNAL_CLI_REST_API_BRANCH}?per_page=1 /tmp/signal-cli-rest-api-version.json
+
 # Clone deftdawg fork of signal-cli-rest-api
 RUN git clone --depth 1 -b ${SIGNAL_CLI_REST_API_BRANCH} ${SIGNAL_CLI_REST_API_REPO} /tmp/signal-cli-rest-api
 

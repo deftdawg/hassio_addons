@@ -1,6 +1,6 @@
 name: Signal Messenger
 url: https://github.com/deftdawg/hassio_addons
-version: 0.97.0
+version: 0.97.0dd2
 slug: signal_messenger
 arch:
 - aarch64
